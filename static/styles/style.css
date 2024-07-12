@@ -19,18 +19,18 @@ body {
 }
 
 input {
-    height: 45px; /* Increased height for better touch targets on mobile */
+    height: 45px;
     width: 100%;
-    max-width: 400px; /* Adjust max-width as needed */
+    max-width: 400px;
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 10px;
     background-color: #dfe1e0;
     color: #000000;
     margin-bottom: 1rem;
-    border: none; /* Remove default border */
-    outline: none; /* Remove outline on focus */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
 }
 
 input:hover {
@@ -38,16 +38,16 @@ input:hover {
 }
 
 button {
-    height: 45px; /* Increased height for consistency */
-    min-width: 120px; /* Set minimum width to avoid button jumping */
+    height: 45px;
+    min-width: 120px;
     font-size: 1rem;
     border-radius: 10px;
     background-color: #fff8f0;
     padding: 0.5rem 1rem;
-    border: none; /* Remove default border */
-    outline: none; /* Remove outline on focus */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -56,7 +56,7 @@ button:hover {
 
 .Heading {
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
     height: auto;
     color: #767522;
     display: flex;
@@ -88,4 +88,30 @@ footer {
 footer p {
     margin: 0;
     padding: 10px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    input {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    .Heading {
+        max-width: 90%;
+        font-size: 1.5rem;
+    }
+
+    footer {
+        padding: 10px;
+        height: auto;
+    }
 }
