@@ -5,35 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} Weather</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <!-- Remove duplicate style.css link -->
 </head>
 
-
-
 <body> 
-    
     <div class="Heading">
-        <img src="https://imgs.search.brave.com/P1jtmBUtinaZwE-6GVO4DvpG0lcQAheAsDuhzP9G26o/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuaW5mb3BsYXph/LmlvL2ludGVybmF0/aW9uYWxzaXRlL2Fz/c2V0cy9pY29ucy93/ZWF0aGVyL3YxL0Ew/MDNEX0xCLnN2Zw" alt="Weather Icon" height="70px" width="70px"
-        >
-    
-    <h1 style = "margin-left:15px;"> {{ title }} Weather</h1>
-    <p style = "padding:15px;">{{ status }} {{ temp }} &deg; <hr> </p>
+        <img src="https://imgs.search.brave.com/P1jtmBUtinaZwE-6GVO4DvpG0lcQAheAsDuhzP9G26o/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuaW5mb3BsYXph/LmlvL2ludGVybmF0/aW9uYWxzaXRlL2Fz/c2V0cy9pY29ucy93/ZWF0aGVyL3YxL0Ew/MDNEX0xCLnN2Zw" alt="Weather Icon" height="70px" width="70px">
+        <h1>{{ title }} Weather</h1>
+        <p>{{ status }} {{ temp }} &deg;</p>
+        <hr>
+        <p>Feels like {{ feels_like }} &deg;</p>
     </div>
-    <div class="Feels">
-    <p style = "padding:15px;">Feels like {{ feels_like }} &deg;</p>
-    </div>
-
 
     <form action="/weather">
         <input type="text" name="city" id="city" placeholder="Enter a City" />
         <button type="submit">Submit</button>
     </form>
+
     <footer>
-        <p>&copy; 2024 WeatherApp   @All rights reserved.</p>
+        <p>&copy; 2024 WeatherApp - All rights reserved.</p>
         <p>Designed by Ali Ashjaa</p>
         <p>Contact: aliashjaa8@gmail.com</p>
     </footer>
